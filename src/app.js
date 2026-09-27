@@ -32,6 +32,10 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+app.get("/", (req, res)=>{
+  res.send("BACKEND IS RUNNING...")
+})
+
 // Mount Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/projects', aiRoutes);
